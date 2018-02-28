@@ -43,7 +43,7 @@ class RequestCollector extends DataCollector
      */
     public function getQueryCount()
     {
-        return count($this->data['queries']);
+        
     }
 
     /**
@@ -97,4 +97,12 @@ class RequestCollector extends DataCollector
     {
         return 'solr';
     }
+
+    /**
+     * Resets this data collector to its initial state.
+     */
+    public function reset() 
+    {
+        return $this->data = [] ;
+    }    
 }
